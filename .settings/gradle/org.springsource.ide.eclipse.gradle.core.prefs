@@ -1,0 +1,4 @@
+#org.springsource.ide.eclipse.gradle.core.preferences.GradleProjectPreferences
+#Wed Jul 18 15:53:16 CST 2018
+build.family.org.gradle.tooling.model.eclipse.HierarchicalEclipseProject=;../des-wkope-task;
+org.springsource.ide.eclipse.gradle.rootprojectloc=
