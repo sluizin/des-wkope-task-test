@@ -43,13 +43,14 @@ public class WKOPETaskTest extends AbstractTask {
 	public WKOPETaskTest(Composite parent, int style) {
 		super(parent, style, WKOPETaskTest.class, AbstractTask.MVver | AbstractTask.MVmodQuit | AbstractTask.MVsysQuit);
 		excelCTabFolder = new ExcelCTabFolder(this, SWT.NONE);
+		excelCTabFolder.initialization();
 		excelCTabFolder.setBounds(10, 10, 868, 108);
 		dbmysqlCTabFolder = new DBMYSQLCTabFolder(this, SWT.None, "0", this.getProProperties(), MainSource.getConnWKjixiao());
 		dbmysqlCTabFolder.setBounds(10, 358, 868, 56);
 
 
 		dbaccessCTabFolder = new DBACCESSCTabFolder(this, SWT.None, "0",base);
-		dbaccessCTabFolder.setBounds(22, 130, 868, 115);
+		dbaccessCTabFolder.setBounds(10, 133, 868, 65);
 		
 		
 		Group grpSql = new Group(this, SWT.NONE);
@@ -91,6 +92,7 @@ public class WKOPETaskTest extends AbstractTask {
 		sqlparainput = new Text(grpSql, SWT.BORDER | SWT.WRAP | SWT.MULTI);
 		sqlparainput.setBounds(677, 17, 181, 103);
 		sqlparainput.setText(jsonStr);
+		
 	}
 	static String jsonStr="{\"title\":\"test\",\"isViewHead\":true,\"headRowSuffix\":0,"
 			+ "\"widthArray\":[50, 110, 150,70,60,90,55,70,90,90,100,90],\"defTCWidth\":150,"
@@ -146,5 +148,10 @@ public class WKOPETaskTest extends AbstractTask {
 	@Override
 	public void multiThreadOnRunEnd() {
 
+	}
+
+	@Override
+	public void disposeResources() {
+		
 	}
 }
