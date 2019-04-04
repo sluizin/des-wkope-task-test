@@ -15,20 +15,7 @@ include 'api'
 include 'services:webservice'
 */
 
-includeFlat  'des-wkope-task'
 rootProject.name = 'des-wkope-task-test'
-
-/* 定义jar文件名 不包含版本 */
-gradle.ext.taskjarfile = rootProject.name
+includeFlat  'des-wkope-task'
 /* 定义版本号 */
 gradle.ext.taskjarversion = "1.1"
-/* 定义作者 */
-gradle.ext.taskvendor = "Sunjian"
-/* 定义拷贝到model目录后的jar文件名 包含版本 */
-gradle.ext.taskjarmodelfilename = "des-wkope-task-p000-test-" + gradle.ext.taskjarversion + ".jar"
-/* 定义在lib目录jar命令后生成的jar文件名 不包含版本 */
-gradle.ext.taskjarfilename = gradle.ext.taskjarfile + ".jar"
-/* gradle打印输出 */
-gradle.ext.taskjarprintln = ">>>>>>>>>>>>>>>>"+ gradle.ext.taskjarfilename +" >>>>>jar"
-/* 要把jar文件转移到的目录 */
-gradle.ext.taskmodelpath = "D:/Eclipse/eclipse-oxygen/Workspaces/des-wkope/build/libs/model"
